@@ -12,9 +12,9 @@ Trong `useEffect`, trả về một destructure function để truy xuất trạ
 
 * `effect` Imperative function với khả năng trả về một cleanup function.
 
-* `deps` Nếu effect hiện diện, nó sẽ chỉ được kích hoạt nếu các giá trị trong danh sách thay đổi.
+* `deps` Nếu effect hiện diện, nó sẽ chỉ được kích hoạt nếu các giá trị trong danh sách có sự thay đổi.
 
-* `returns` Trả về trạng thái của vòng đời, sử dụng bên ngoài hook này.
+* `returns` Trả về trạng thái của vòng đời, được sử dụng bên ngoài hook này.
 
 ```typescript
 import { useRef, useEffect, DependencyList, MutableRefObject } from 'react';
@@ -59,7 +59,7 @@ export function useStatusEffect(effect?: StatusEffectCallback, deps?: Dependency
 
 useStatusEffect((status) => {
 
-    // Bỏ qua lần render ban đầu vì chúng tôi chỉ muốn sử dụng effect này khi `variable` có sự thay đổi.
+    // Bỏ qua lần render ban đầu vì tôi chỉ muốn sử dụng effect này khi `variable` có sự thay đổi.
     if (status.current === 'mount') {
       return;
     }

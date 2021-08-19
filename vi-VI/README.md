@@ -54,7 +54,7 @@ export function useStatusEffect(effect?: StatusEffectCallback, deps?: Dependency
   return { status };
 }
 ```
-### Usage
+### Sử dụng
 ```typescript
 
 useStatusEffect((status) => {

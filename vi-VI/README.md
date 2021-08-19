@@ -1,4 +1,4 @@
-# Effect Hook cho phép thực hiện side effect bên trong các function component:
+# Effect Hook cho phép thực hiện side effect bên trong các function component
 
 Dùng `useRef` để lưu trữ các trạng thái `mount` | `update` | `unmount`.
 
